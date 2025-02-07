@@ -1,0 +1,134 @@
+body{
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("background.jpeg");
+    height: 100vh; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 300px;
+    height: max-content;
+    min-height: 300px;
+    background-image: linear-gradient(#00bfff, #87CEEB);
+    border-radius: 30px ;
+    box-shadow: 0 10px 50px #87CEEB;
+    padding: 30px;
+    box-sizing: border-box;
+}
+main form{
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+main form input,
+main form button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+}
+main form i{
+    color: #fff;
+}
+main .result{
+    padding-top: 20px;
+    text-align: center;
+}
+main .result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+main .temperature img{
+    width: 150px;
+    filter: drop-shadow(
+        0 10px 50px #448EE4 
+    )
+}
+main .temperature figcaption{
+    font-size: 3em;
+}
+main .description{
+    padding: 10px 0 30px;
+}
+main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+main li{
+    background-color: #448EE4;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(#448EE4, #64A2E8);
+    font-weight: bold;
+    font-size: small;
+}
+main li i{
+    font-size: 2em;
+    display: block!important;
+    margin: 20px 0;
+}
+main li:nth-child(2){
+    background-image: linear-gradient(#346EB0, #448EE4);
+}
+main li:nth-child(3){
+    background-image: linear-gradient(#2A588D, #346EB0);
+}
+
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect {
+    0%{
+        transform: translate(10px, 5px);
+    }
+    25%{
+        transform: translate(-5px, 0);
+    }
+    50%{
+        transform: translate(8px, 2px);
+    }
+    75%{
+        transform: translate(-2px, 5px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+main.night{
+    background-image: linear-gradient(#02001a, #0f0033);
+    color: #fff;
+    box-shadow: 0 10px 50px #0f0033;
+}
+main.night form input{
+    color: #fff;
+}
+main.night li{
+    background-image: linear-gradient(#1E3F64, #264F7E);
+}
+main.night li:nth-child(2){
+    background-image: linear-gradient(#183250, #1E3F64);
+}
+main.night li:nth-child(3){
+    background-image: linear-gradient(#13283F, #183250);
+}
+body.night{
+    background-image: url('night-background.jpeg');
+}
